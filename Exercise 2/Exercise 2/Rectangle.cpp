@@ -6,6 +6,9 @@ Rectangle::Rectangle()
 {
 }
 
+Rectangle::Rectangle(double height, double width)
+{
+}
 
 Rectangle::~Rectangle()
 {

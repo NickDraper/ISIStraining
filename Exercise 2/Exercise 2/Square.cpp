@@ -6,6 +6,9 @@ Square::Square()
 {
 }
 
+Square::Square(double side)
+{
+}
 
 Square::~Square()
 {

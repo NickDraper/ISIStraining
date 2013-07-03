@@ -6,6 +6,7 @@ class Triangle :
 {
 public:
   Triangle();
+  Triangle(double height, double width);
   ~Triangle();
 };
 #endif

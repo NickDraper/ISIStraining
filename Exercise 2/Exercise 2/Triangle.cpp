@@ -6,6 +6,10 @@ Triangle::Triangle()
 {
 }
 
+Triangle::Triangle(double height, double width)
+{
+
+}
 
 Triangle::~Triangle()
 {
