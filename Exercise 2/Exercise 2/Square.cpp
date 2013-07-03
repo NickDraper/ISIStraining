@@ -2,11 +2,11 @@
 #include "Square.h"
 
 
-Square::Square(void)
+Square::Square()
 {
 }
 
 
-Square::~Square(void)
+Square::~Square()
 {
 }

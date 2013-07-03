@@ -2,11 +2,11 @@
 #include "Circle.h"
 
 
-Circle::Circle(void)
+Circle::Circle()
 {
 }
 
 
-Circle::~Circle(void)
+Circle::~Circle()
 {
 }

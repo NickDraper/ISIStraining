@@ -2,11 +2,11 @@
 #include "Rectangle.h"
 
 
-Rectangle::Rectangle(void)
+Rectangle::Rectangle()
 {
 }
 
 
-Rectangle::~Rectangle(void)
+Rectangle::~Rectangle()
 {
 }

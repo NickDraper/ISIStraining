@@ -2,11 +2,11 @@
 #include "Triangle.h"
 
 
-Triangle::Triangle(void)
+Triangle::Triangle()
 {
 }
 
 
-Triangle::~Triangle(void)
+Triangle::~Triangle()
 {
 }

@@ -1,10 +1,12 @@
-#pragma once
+#ifndef DEF_triangle_h
+#define DEF_triangle_h
 #include "shape.h"
 class Triangle :
 	public Shape
 {
 public:
-  Triangle(void);
-  ~Triangle(void);
+  Triangle();
+  ~Triangle();
 };
+#endif
 

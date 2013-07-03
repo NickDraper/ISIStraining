@@ -2,11 +2,11 @@
 #include "Shape.h"
 
 
-Shape::Shape(void)
+Shape::Shape()
 {
 }
 
 
-Shape::~Shape(void)
+Shape::~Shape()
 {
 }
