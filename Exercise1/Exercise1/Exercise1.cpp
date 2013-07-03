@@ -24,14 +24,12 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	typedef string::size_type string_size;
 	const string punctchars = "= .,?'\"!(): \t\n\v\f\r-";
-	//list<string>
-	//vector<string>
 	int fail_count = 0;
 	map <string, int> wordcount;
-	for (int c = 1; c < argc; ++c)
+	//for (int c = 1; c < argc; ++c)
 	{
-		ifstream infile(argv[c]);
-		//ifstream infile("Holmes.txt");
+		//ifstream infile(argv[c]);
+		ifstream infile("Holmes.txt");
 		if (infile)
 		{
 			int d = 0;
@@ -63,7 +61,6 @@ int _tmain(int argc, _TCHAR* argv[])
 					if (veciter->size() >= 4)
 					{
 						int striter = 0;
-						char changecase;
 						while (striter != veciter->size())
 						{
 							if (veciter->find_first_of(punctchars,0) != string::npos)
@@ -72,7 +69,7 @@ int _tmain(int argc, _TCHAR* argv[])
 							}
 							else
 							{
-								for (int convchar = 0; convchar < veciter->length(); convchar++)
+								for (unsigned int convchar = 0; convchar < veciter->length(); convchar++)
 								{
 									(*veciter)[convchar] = tolower((*veciter)[convchar]);
 								}
@@ -88,34 +85,41 @@ int _tmain(int argc, _TCHAR* argv[])
 			}
 			vector<string> listout;
 			int trackhigh = 0;
+			int longest = 0;
 			for (map <string, int>::const_iterator mapiter = wordcount.begin(); mapiter != wordcount.end(); ++mapiter)
 			{
-				if (mapiter->second > trackhigh)
-				{
-					trackhigh = mapiter->second;
-				}
+				int wordlength = mapiter->first.size();
+				trackhigh = std::max(trackhigh,mapiter->second);
+				longest = std::max(longest, wordlength);
 			}
 			for (trackhigh; trackhigh >= 4; trackhigh--)
 			{
-				for (map <string, int>::const_iterator mapiter = wordcount.begin(); mapiter != wordcount.end(); ++mapiter)
+				map <string, int>::const_iterator mapiter = wordcount.begin();
+				while (mapiter != wordcount.end())
 				{
 					if (mapiter->second == trackhigh)
 					{
 						std::ostringstream convert;
 						convert << mapiter->second;
-						listout.push_back(mapiter->first + "    " + convert.str());
+						listout.push_back(mapiter->first  + string((longest - mapiter->first.size()) + 9, ' ') +  convert.str());
+						mapiter = wordcount.erase(mapiter);
+					}
+					else
+					{
+						++mapiter;
 					}
 				}
 			}
-			ofstream outfile("output.txt");
+			ofstream outfile;
 			if (outfile)
 			{
-				outfile << "Word                Usage" << endl;
+				outfile.open("output.txt");
+				outfile << "Word" + string((longest - 4) + 9, ' ') + "Usage" << endl;
 				for (vector<string>::const_iterator veciter = listout.begin(); veciter != listout.end(); ++veciter)
 				{
-
 					outfile << (*veciter) << endl;
 				}
+				outfile.close();
 			}
 			else
 			{
@@ -125,7 +129,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		else
 		{
-			cerr << "cannot open file " << argv[c] << endl;
+			//cerr << "cannot open file " << argv[c] << endl;
 			++fail_count;
 		}
 
