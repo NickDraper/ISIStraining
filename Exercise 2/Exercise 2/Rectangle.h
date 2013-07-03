@@ -1,10 +1,10 @@
 #pragma once
 #include "shape.h"
 class Rectangle :
-	public Shape
+  public Shape
 {
 public:
-	Rectangle(void);
-	~Rectangle(void);
+  Rectangle(void);
+  ~Rectangle(void);
 };
 

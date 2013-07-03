@@ -1,10 +1,10 @@
 #pragma once
 #include "shape.h"
 class Square :
-	public Shape
+  public Shape
 {
 public:
-	Square(void);
-	~Square(void);
+  Square(void);
+  ~Square(void);
 };
 
