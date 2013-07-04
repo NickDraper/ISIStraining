@@ -8,8 +8,8 @@ class Circle :
 public:
   Circle();
   Circle(double radius);
-  double Perimeter(){return 0;};
-  double Area(){return 0;};
+  double Perimeter();
+  double Area();
   double GetRadius(){return mval1;};
   ~Circle();
 };

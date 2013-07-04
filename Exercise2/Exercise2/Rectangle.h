@@ -7,8 +7,8 @@ class Rectangle :
 public:
   Rectangle();
   Rectangle(double height, double width);
-  double Perimeter(){return 0;};
-  double Area(){return 0;};
+  double Perimeter();
+  double Area();
   double GetHeight(){return mval1;};
   double GetWidth(){return mval2;};
   ~Rectangle();

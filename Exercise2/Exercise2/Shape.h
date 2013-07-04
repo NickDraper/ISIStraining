@@ -7,7 +7,6 @@ class Shape
 public:
   Shape();
   Shape(std::string type, double val1, double val2, int sides);
-  Shape(const Shape& s);
   ~Shape();
   double Perimeter(){return 0;};
   double Area(){return 0;};

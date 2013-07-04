@@ -18,3 +18,13 @@ Circle::~Circle()
 {
 
 }
+
+double Circle::Perimeter()
+{
+  return M_2_PI*mval1;
+}
+
+double Circle::Area()
+{
+  return (mval1*mval1)*M_PI;
+}
