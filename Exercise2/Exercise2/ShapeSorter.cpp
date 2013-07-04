@@ -16,7 +16,7 @@ ShapeSorter::~ShapeSorter()
 {
 }
 //Print out the Shapes that match a chosen type
-const void ShapeSorter::TypeMatch(const vector<Shape*> &v, const std::string &type) const
+void ShapeSorter::TypeMatch(const vector<Shape*> &v, const std::string &type) const
 {
   for(vector<Shape*>::const_iterator shapeiter = v.begin(); shapeiter != v.end(); ++shapeiter)
   {
@@ -28,7 +28,7 @@ const void ShapeSorter::TypeMatch(const vector<Shape*> &v, const std::string &ty
 }
 
 //Print out the Shapes that match a chosen number of sides
-const void ShapeSorter::SideMatch(const vector<Shape*> &v, int sides) const
+void ShapeSorter::SideMatch(const vector<Shape*> &v, int sides) const
 {
   for(vector<Shape*>::const_iterator shapeiter = v.begin(); shapeiter != v.end(); ++shapeiter)
   {
@@ -53,7 +53,7 @@ void ShapeSorter::PrintListPerimeter(vector<Shape*> &v) const
   int t = 7;
 }
 
-const void ShapeSorter::PrintShape(const Shape &s) const
+void ShapeSorter::PrintShape(const Shape &s) const
 {
     cout << s.Type() << endl;
     cout << s.Sides() << endl;
