@@ -1,4 +1,4 @@
-// Exercise 2.cpp : Defines the entry point for the console application.
+// Exercise2.cpp : Defines the entry point for the console application.
 //
 
 #include "Circle.h"
@@ -15,4 +15,3 @@ int _tmain(int argc, _TCHAR* argv[])
 
   return 0;
 }
-

@@ -13,9 +13,7 @@ public:
   double Area(){return 0;};
   std::string Type(){return mtype;};
   int Sides(){return msides;};
-  double GetVal1(){return mval1;};
-  double GetVal2(){return mval2;};
-private:
+protected:
   int msides;
   std::string mtype;
   double mval1, mval2;

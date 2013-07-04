@@ -1,8 +1,10 @@
 #ifndef DEF_ShapeSorter_h
 #define DEF_ShapeSorter_h
+
 #include <string>
-#include "Shape.h";
+#include "Shape.h"
 #include <vector>
+
 class ShapeSorter
 {
 public:
