@@ -7,9 +7,9 @@ class Square :
 public:
   Square();
   Square(double side);
-  double Perimeter();
-  double Area();
-  double GetSide(){return mval1;};
+  const double Perimeter() const;
+  const double Area() const;
+  const double GetSide() const;
   ~Square();
 };
 

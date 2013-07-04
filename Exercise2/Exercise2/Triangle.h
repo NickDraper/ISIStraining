@@ -7,10 +7,10 @@ class Triangle :
 public:
   Triangle();
   Triangle(double height, double width);
-  double Perimeter();
-  double Area();
-  double GetHeight(){return mval1;};
-  double GetWidth(){return mval2;};
+  const double Perimeter() const;
+  const double Area() const;
+  const double GetHeight() const;
+  const double GetWidth() const;
   ~Triangle();
 };
 #endif

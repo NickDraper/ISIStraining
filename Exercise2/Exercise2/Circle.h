@@ -8,9 +8,9 @@ class Circle :
 public:
   Circle();
   Circle(double radius);
-  double Perimeter();
-  double Area();
-  double GetRadius(){return mval1;};
+  const double Perimeter() const;
+  const double Area() const;
+  const double GetRadius() const;
   ~Circle();
 };
 

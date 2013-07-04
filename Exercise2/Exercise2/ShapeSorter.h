@@ -11,13 +11,17 @@ public:
   ShapeSorter();
   ~ShapeSorter();
 //Print out the Shapes that match a chosen type
-  void TypeMatch(std::vector<Shape>, std::string type);
+  void TypeMatch(const std::vector<Shape*> &v, const std::string &type) const;
 //Print out the Shapes that match a chosen number of sides
-  void SideMatch(std::vector<Shape>, int sides);
+  void SideMatch(const std::vector<Shape*> &v, int sides) const;
 //Print out the Shapes in order of volume descending
-  void PrintArea(std::vector<Shape>);
+  void PrintListArea(std::vector<Shape*> &v) const;
 //Print out the Shapes in order of perimeter descending
-  void PrintPerimeter(std::vector<Shape>);
+  void PrintListPerimeter(std::vector<Shape*> &v) const;
+  void PrintShape(const Shape &s) const;
+private:
+  static bool ComparePerim(const Shape* first, const Shape* second);
+  static bool CompareArea(const Shape* first, const Shape* second);
 };
 
 #endif
